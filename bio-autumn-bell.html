@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Autumn Bell | Crazy Combs Salon — Raleigh, NC</title>
+<meta name="description" content="Autumn Bell is the salon coordinator at Crazy Combs Salon in Raleigh, NC — the friendly voice at the front desk.">
+<meta property="og:title" content="Autumn Bell | Crazy Combs Salon">
+<meta property="og:description" content="Autumn Bell is the salon coordinator at Crazy Combs Salon in Raleigh, NC — the friendly voice at the front desk.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ctext y='19' font-size='19'%3E%F0%9F%8C%B8%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=Karla:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   CRAZY COMBS SALON — team bio page (matches homepage redesign)
+   ============================================================ */
+:root{
+  --bg:#FDF9F4;
+  --bg-soft:#F7EFE7;
+  --card:#FFFFFF;
+  --ink:#453038;
+  --ink-2:#6F5560;
+  --muted:#9B8390;
+  --rose:#C4677C;
+  --rose-deep:#A94F65;
+  --blush:#F6E1E5;
+  --blush-soft:#FBF0F2;
+  --sage:#7C9070;
+  --sage-soft:#EAF0E4;
+  --line:#EEDFD6;
+  --shadow:0 12px 32px rgba(90,52,64,.10);
+  --shadow-lg:0 20px 48px rgba(90,52,64,.16);
+  --radius:22px;
+  --font-head:"Fraunces",Georgia,serif;
+  --font-body:"Karla",-apple-system,"Segoe UI",sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-body);background:var(--bg);color:var(--ink);line-height:1.65;font-size:17px;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:var(--rose-deep);text-decoration:none}
+a:focus-visible,button:focus-visible{outline:3px solid var(--rose);outline-offset:3px;border-radius:6px}
+h1,h2,h3,h4{font-family:var(--font-head);font-weight:600;line-height:1.15;color:var(--ink)}
+.wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+.icon{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
+.icon.filled{fill:currentColor;stroke:none}
+.eyebrow{font-family:var(--font-head);font-style:italic;font-size:1.15rem;color:var(--rose);letter-spacing:.02em;display:block;margin-bottom:10px}
+
+/* ---------- buttons ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-family:var(--font-body);font-weight:700;font-size:1rem;letter-spacing:.01em;padding:15px 30px;border-radius:999px;border:none;cursor:pointer;transition:transform .25s ease,box-shadow .25s ease,background .25s ease;text-decoration:none}
+.btn-primary{background:linear-gradient(135deg,var(--rose) 0%,var(--rose-deep) 100%);color:#fff;box-shadow:0 10px 24px rgba(169,79,101,.32)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 16px 32px rgba(169,79,101,.4)}
+.btn-ghost{background:rgba(255,255,255,.85);color:var(--ink);border:1.5px solid var(--line);backdrop-filter:blur(6px)}
+.btn-ghost:hover{transform:translateY(-2px);background:#fff;box-shadow:var(--shadow)}
+.btn .icon{width:18px;height:18px}
+
+/* ---------- header (refreshed, premium) ---------- */
+header{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(253,249,244,.86);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);transition:box-shadow .3s ease}
+header::before{content:"";display:block;height:3px;background:linear-gradient(90deg,var(--rose) 0%,#D9B98A 50%,var(--sage) 100%)}
+header.scrolled{box-shadow:0 4px 24px rgba(90,52,64,.08)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:74px;gap:20px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand-logo{height:44px;width:auto;display:block}
+.brand-name{font-family:var(--font-head);font-weight:600;font-size:1.45rem;color:var(--ink);line-height:1}
+.brand-name em{font-style:italic;color:var(--rose)}
+.nav-links{display:flex;align-items:center;gap:28px;list-style:none}
+.nav-links a{color:var(--ink-2);font-weight:700;font-size:.98rem;transition:color .2s}
+.nav-links a:hover{color:var(--rose-deep)}
+.nav-cta{padding:11px 24px;font-size:.95rem}
+
+/* ---------- bio hero ---------- */
+.bhero{position:relative;padding:158px 0 64px;background:
+  radial-gradient(ellipse at 88% 6%,rgba(246,225,229,.75) 0%,transparent 50%),
+  radial-gradient(ellipse at 4% 90%,rgba(234,240,228,.7) 0%,transparent 45%),
+  var(--bg);overflow:hidden}
+.petal{position:absolute;color:var(--rose);opacity:.13;pointer-events:none}
+.petal svg{width:100%;height:100%}
+.petal-1{width:120px;height:120px;top:110px;right:-20px;transform:rotate(20deg)}
+.petal-2{width:80px;height:80px;bottom:8%;left:3%;transform:rotate(-24deg);color:var(--sage);opacity:.16}
+.bhero-grid{display:grid;grid-template-columns:.92fr 1.08fr;gap:64px;align-items:center}
+.portrait{position:relative;max-width:440px;justify-self:center;width:100%}
+.portrait .frame{position:relative;border-radius:26px;overflow:hidden;box-shadow:var(--shadow-lg);aspect-ratio:4/4.7;background:linear-gradient(150deg,var(--blush-soft),var(--sage-soft));display:grid;place-items:center}
+.portrait .init{position:absolute;font-family:var(--font-head);font-style:italic;font-size:3.4rem;color:var(--rose);opacity:.5}
+.portrait .frame img{position:relative;z-index:1;width:100%;height:100%;object-fit:cover}
+.portrait .accent{position:absolute;z-index:-1;inset:auto -20px -20px auto;width:60%;height:60%;border-radius:26px;background:var(--blush)}
+.portrait .accent-2{position:absolute;z-index:-1;top:-18px;left:-18px;width:42%;height:42%;border-radius:26px;background:var(--sage-soft)}
+.back{display:inline-flex;align-items:center;gap:8px;font-weight:700;color:var(--ink-2);font-size:.95rem;margin-bottom:20px;transition:color .2s}
+.back:hover{color:var(--rose-deep)}
+.back .icon{width:15px;height:15px;transform:rotate(180deg)}
+.bhero h1{font-size:clamp(2.4rem,5vw,3.5rem);margin-bottom:16px}
+.bhero h1 em{font-style:italic;color:var(--rose-deep)}
+.chips{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:22px}
+.chip{background:var(--blush);color:var(--rose-deep);font-weight:700;font-size:.86rem;padding:7px 17px;border-radius:999px}
+.chip:nth-child(even){background:var(--sage-soft);color:var(--sage)}
+.flower-divider{display:flex;align-items:center;gap:14px;margin:0 0 26px;max-width:230px}
+.flower-divider::before,.flower-divider::after{content:"";height:1px;flex:1;background:var(--line)}
+.flower-divider .icon{width:17px;height:17px;color:var(--rose);opacity:.85}
+.actions{display:flex;gap:13px;flex-wrap:wrap}
+.insta-line{display:flex;align-items:center;gap:9px;margin-top:20px;color:var(--ink-2);font-size:.98rem}
+.insta-line .icon{width:19px;height:19px;color:var(--rose)}
+.insta-line a{font-weight:700}
+.booknote{margin-top:20px;font-size:.93rem;color:var(--muted)}
+.booknote a{font-weight:700}
+
+/* ---------- bio body ---------- */
+.bio-body{padding:64px 0 26px}
+.bio-copy{max-width:760px;margin:0 auto}
+.bio-copy p{color:var(--ink-2);margin-bottom:20px}
+.bio-copy p:first-of-type{font-size:1.13rem;color:var(--ink)}
+.bio-copy p b,.bio-copy p strong{color:var(--ink)}
+.callout{display:flex;gap:16px;align-items:flex-start;background:var(--blush-soft);border:1px solid var(--line);border-left:4px solid var(--rose);border-radius:16px;padding:22px 24px;margin-top:30px}
+.callout .icon{width:21px;height:21px;color:var(--rose);margin-top:3px}
+.callout p{font-size:.95rem;color:var(--ink-2);margin:0}
+.callout b{color:var(--ink)}
+
+/* ---------- prev / next crew ---------- */
+.crew{padding:56px 0}
+.crew-grid{display:grid;grid-template-columns:1fr auto 1fr;gap:18px;align-items:center}
+.crew-card{display:flex;align-items:center;gap:15px;background:var(--card);border:1px solid rgba(238,223,214,.7);border-radius:18px;padding:14px 20px;box-shadow:var(--shadow);transition:transform .3s ease,box-shadow .3s ease;min-width:0}
+.crew-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
+.crew-card img{width:56px;height:56px;border-radius:50%;object-fit:cover;flex-shrink:0;background:var(--blush-soft)}
+.crew-card small{display:block;font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.crew-card b{color:var(--ink);font-size:1.02rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.crew-card>div{min-width:0}
+.crew-card.next{flex-direction:row-reverse;text-align:right;justify-self:end}
+.crew-card.prev{justify-self:start}
+.crew-all{white-space:nowrap}
+
+/* ---------- CTA band ---------- */
+.band-sec{padding:26px 0 84px}
+.band{background:
+  radial-gradient(ellipse at 84% 10%,rgba(217,185,138,.22),transparent 55%),
+  radial-gradient(ellipse at 8% 92%,rgba(196,103,124,.2),transparent 50%),
+  linear-gradient(150deg,#5A414C 0%,#4A353E 48%,#3B2A32 100%);
+  border-radius:26px;padding:60px 40px;text-align:center;color:#F6E8DC;box-shadow:var(--shadow-lg)}
+.band h2{font-size:clamp(1.7rem,3.2vw,2.3rem);color:#FBF2E9;margin-bottom:12px}
+.band h2 em{font-style:italic;color:#E8A5B5}
+.band p{color:#D9C3CA;max-width:480px;margin:0 auto 28px}
+.band .actions{justify-content:center}
+.band .btn-ghost{background:rgba(255,255,255,.1);color:#F6E8DC;border-color:rgba(255,255,255,.25)}
+.band .btn-ghost:hover{background:rgba(255,255,255,.18);box-shadow:none}
+
+/* ---------- footer ---------- */
+footer{background:#4A353E;color:#F3E6E9;padding:64px 0 0}
+.foot-grid{display:grid;grid-template-columns:1.3fr 1fr 1.1fr;gap:44px;padding-bottom:48px}
+.foot-brand .brand-name{color:#fff;font-size:1.6rem}
+.foot-brand .brand-name em{color:#E8A5B5}
+.foot-brand p{color:#D9C3CA;font-size:.96rem;margin:16px 0 22px;max-width:300px}
+footer h4{font-family:var(--font-body);font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;color:#E8A5B5;margin-bottom:18px}
+.foot-info{list-style:none;display:grid;gap:13px;color:#D9C3CA;font-size:.95rem}
+.foot-info li{display:flex;gap:11px;align-items:flex-start}
+.foot-info .icon{width:17px;height:17px;color:#E8A5B5;margin-top:4px}
+.foot-info a{color:#F3E6E9}
+.socials{display:flex;gap:12px}
+.soc{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.1);color:#F3E6E9;transition:all .25s ease}
+.soc:hover{background:var(--rose);color:#fff;transform:translateY(-3px)}
+.soc .icon{width:20px;height:20px}
+.foot-book .btn{width:100%;margin-bottom:14px}
+.foot-book p{color:#D9C3CA;font-size:.88rem}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.12);padding:24px 0;display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;color:#B99AA4;font-size:.87rem}
+.foot-bottom a{color:#D9C3CA;font-weight:700}
+
+/* ---------- reveal ---------- */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s ease;transition-delay:var(--d,0s)}
+.reveal.in{opacity:1;transform:none}
+
+/* ---------- scissors cursor + snip (same as homepage) ---------- */
+@media (pointer:fine){
+  body,a,button,input,select,textarea,label,[role=button]{cursor:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='28' viewBox='0 0 28 28'%3E%3Cg fill='none' stroke='%23FFFFFF' stroke-width='5' stroke-linecap='round'%3E%3Cpath d='M9 9 24 19M9 19 24 9'/%3E%3C/g%3E%3Cg fill='none' stroke='%23A94F65' stroke-width='2.2' stroke-linecap='round'%3E%3Cpath d='M9 9 24 19M9 19 24 9'/%3E%3C/g%3E%3Ccircle cx='6' cy='7' r='3' fill='%23FFFFFF' stroke='%23A94F65' stroke-width='2'/%3E%3Ccircle cx='6' cy='21' r='3' fill='%23FFFFFF' stroke='%23A94F65' stroke-width='2'/%3E%3C/svg%3E") 24 14,auto}
+  body.snip-hide,body.snip-hide *{cursor:none!important}
+}
+.snip-cursor{position:fixed;z-index:1000;width:28px;height:28px;margin:-14px 0 0 -24px;pointer-events:none}
+.snip-cursor svg{width:100%;height:100%;display:block;overflow:visible}
+.snip-cursor .bA,.snip-cursor .bB{transform-box:view-box;transform-origin:16.5px 14px}
+.snip-cursor .bA{animation:snipA .36s ease-in-out both}
+.snip-cursor .bB{animation:snipB .36s ease-in-out both}
+@keyframes snipA{0%,100%{transform:rotate(0)}38%{transform:rotate(-15deg)}68%{transform:rotate(5deg)}}
+@keyframes snipB{0%,100%{transform:rotate(0)}38%{transform:rotate(15deg)}68%{transform:rotate(-5deg)}}
+.snip-bit{position:fixed;z-index:999;pointer-events:none;color:var(--rose);animation:snipfall .95s ease-in forwards}
+.snip-bit svg{width:14px;height:14px;display:block}
+@keyframes snipfall{
+  0%{transform:translate(0,0) rotate(0deg);opacity:.95}
+  100%{transform:translate(var(--dx,20px),88px) rotate(var(--rot,120deg));opacity:0}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .reveal{opacity:1;transform:none;transition:none}
+  .snip-bit,.snip-cursor{display:none}
+}
+
+/* ---------- responsive ---------- */
+@media (max-width:880px){
+  .nav-links{display:none}
+  .bhero{padding:140px 0 52px}
+  .bhero-grid{grid-template-columns:1fr;gap:44px}
+  .portrait{max-width:380px}
+  .crew-grid{grid-template-columns:1fr 1fr}
+  .crew-all{grid-column:1/-1;justify-self:center;order:3}
+  .foot-grid{grid-template-columns:1fr;gap:36px}
+}
+@media (max-width:640px){
+  body{font-size:16px}
+  .brand-logo{height:38px}
+  .actions .btn{width:100%}
+  .band{padding:44px 24px}
+  .crew-grid{grid-template-columns:1fr}
+  .crew-card.next{justify-self:stretch}
+  .crew-card.prev{justify-self:stretch}
+  .foot-bottom{justify-content:center;text-align:center}
+}
+</style>
+<noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
+</head>
+<body>
+
+<!-- ============ SVG icon set ============ -->
+<svg style="display:none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <symbol id="i-flower" viewBox="0 0 24 24"><circle cx="12" cy="12" r="2.4"/><path d="M12 9.6c-1.6-1-2.2-3.2-1.2-5 .8-1.4 2.4-1.4 3.2 0 1 1.8.4 4-1.2 5Z M14.1 10.8c.3-1.9 2-3.3 4-3 1.6.3 2.1 1.8 1.1 3.1-1.2 1.6-3.5 1.7-5.1.7Z M14.1 13.2c1.6-1 3.9-.9 5.1.7 1 1.3.5 2.8-1.1 3.1-2 .3-3.7-1.1-4-3Z M12 14.4c1.6 1 2.2 3.2 1.2 5-.8 1.4-2.4 1.4-3.2 0-1-1.8-.4-4 1.2-5Z M9.9 13.2c-.3 1.9-2 3.3-4 3-1.6-.3-2.1-1.8-1.1-3.1 1.2-1.6 3.5-1.7 5.1-.7Z M9.9 10.8c-1.6 1-3.9.9-5.1-.7-1-1.3-.5-2.8 1.1-3.1 2-.3 3.7 1.1 4 3Z"/></symbol>
+  <symbol id="i-scissors" viewBox="0 0 24 24"><circle cx="6" cy="6" r="2.6"/><circle cx="6" cy="18" r="2.6"/><path d="M8.2 7.6 20 19M8.2 16.4 20 5M13.4 12.7l1.8 1.7"/></symbol>
+  <symbol id="i-polish" viewBox="0 0 24 24"><path d="M10 9V4.5c0-1 .7-1.5 2-1.5s2 .5 2 1.5V9"/><path d="M8.5 9h7c1 0 1.5.6 1.5 1.5v8c0 1.4-1 2.5-2.5 2.5h-5C8 21 7 19.9 7 18.5v-8C7 9.6 7.5 9 8.5 9Z"/><path d="M10 13.5c.8 1 1.2 2.2 1.2 3.5"/></symbol>
+  <symbol id="i-sparkle" viewBox="0 0 24 24"><path d="M12 3c.6 4.2 2.8 6.4 7 7-4.2.6-6.4 2.8-7 7-.6-4.2-2.8-6.4-7-7 4.2-.6 6.4-2.8 7-7ZM19 15l.6 2.4L22 18l-2.4.6L19 21l-.6-2.4L16 18l2.4-.6L19 15Z"/></symbol>
+  <symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 20.5C6.5 16.7 3 13.4 3 9.5 3 6.9 5 5 7.5 5c1.8 0 3.4 1 4.5 2.6C13.1 6 14.7 5 16.5 5 19 5 21 6.9 21 9.5c0 3.9-3.5 7.2-9 11Z"/></symbol>
+  <symbol id="i-paw" viewBox="0 0 24 24"><circle cx="7" cy="8.5" r="1.9"/><circle cx="12" cy="6.5" r="1.9"/><circle cx="17" cy="8.5" r="1.9"/><path d="M12 11c2.6 0 5.4 2.3 5.4 4.9 0 1.6-1.2 2.6-2.7 2.6-1 0-1.9-.5-2.7-.5s-1.7.5-2.7.5c-1.5 0-2.7-1-2.7-2.6C6.6 13.3 9.4 11 12 11Z"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s7-6.1 7-11a7 7 0 1 0-14 0c0 4.9 7 11 7 11Z"/><circle cx="12" cy="10" r="2.6"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M6 3h3l1.5 4.5L8.5 9a12 12 0 0 0 6.5 6.5l1.5-2L21 15v3a2 2 0 0 1-2 2C10.2 20 4 13.8 4 5a2 2 0 0 1 2-2Z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5.5" width="18" height="13" rx="2.5"/><path d="m4 7.5 8 6 8-6"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M21 11.5a7.5 7.5 0 0 1-7.5 7.5H6l-2.6 2.1c-.6.5-1.4.1-1.4-.7V11.5a9.5 9.5 0 0 1 9.5-9.5 9.5 9.5 0 0 1 9.5 9.5Z"/><path d="M8.5 11.5h.01M12 11.5h.01M15.5 11.5h.01"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h15M13.5 6l6 6-6 6"/></symbol>
+  <symbol id="i-instagram" viewBox="0 0 24 24"><rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="i-facebook" viewBox="0 0 24 24"><path d="M15.5 4.5H14a3.5 3.5 0 0 0-3.5 3.5v2.5H8v3h2.5v6h3v-6H16l.5-3h-3V8a1 1 0 0 1 1-1h1v-2.5Z"/></symbol>
+  <symbol id="i-tiktok" viewBox="0 0 24 24"><path d="M14.5 4c.6 2.2 2.1 3.6 4.5 3.9v2.9c-1.7 0-3.2-.5-4.5-1.5v5.9a5.4 5.4 0 1 1-5.4-5.4c.3 0 .6 0 .9.1v3a2.4 2.4 0 1 0 1.5 2.3V4h3Z"/></symbol>
+  <symbol id="i-leaf" viewBox="0 0 24 24"><path d="M5 19C5 9 11 4 20 4c0 9-5 15-15 15Z"/><path d="M5 19c2.5-5 6-8.5 10.5-10.5"/></symbol>
+</svg>
+
+<!-- ============ HEADER ============ -->
+<header id="site-header">
+  <div class="wrap nav">
+    <a class="brand" href="index.html" aria-label="Crazy Combs Salon — home">
+      <img class="brand-logo" src="https://images.squarespace-cdn.com/content/v1/6455174a12f9733c95fe79c3/e8d40ac1-c825-45cf-a44f-882f78cf05a4/logo-transparent-png.png?format=500w" alt="Crazy Combs Salon" onerror="this.style.display='none';this.nextElementSibling.style.display='inline'">
+      <span class="brand-name" style="display:none">Crazy <em>Combs</em></span>
+    </a>
+    <nav aria-label="Main">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="index.html#gallery">Gallery</a></li>
+        <li><a href="index.html#team">Meet the Team</a></li>
+        <li><a href="index.html#visit">Visit Us</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn-primary nav-cta" href="https://www.vagaro.com/crazycombs/book-now" target="_blank" rel="noopener">Book Now</a>
+  </div>
+</header>
+
+<main>
+
+<!-- ============ BIO HERO ============ -->
+<section class="bhero">
+  <div class="petal petal-1" aria-hidden="true"><svg><use href="#i-flower"/></svg></div>
+  <div class="petal petal-2" aria-hidden="true"><svg><use href="#i-leaf"/></svg></div>
+  <div class="wrap bhero-grid">
+    <div class="portrait reveal">
+      <div class="accent" aria-hidden="true"></div>
+      <div class="accent-2" aria-hidden="true"></div>
+      <div class="frame">
+        <span class="init" aria-hidden="true">AB</span>
+        <img src="https://images.squarespace-cdn.com/content/v1/6455174a12f9733c95fe79c3/154f376c-c944-4602-83ee-1c35b2d69f24/AutumnGrad-15+%281%29.jpg?format=1000w" alt="Autumn Bell, salon coordinator at Crazy Combs Salon" onerror="this.style.display='none'">
+      </div>
+    </div>
+    <div class="reveal" style="--d:.12s">
+      <a class="back" href="index.html#team"><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg> Back to the team</a>
+      <span class="eyebrow">Meet the front desk</span>
+      <h1>Autumn <em>Bell</em></h1>
+      <div class="chips"><span class="chip">Salon Coordinator</span><span class="chip">Operations</span></div>
+      <div class="flower-divider"><svg class="icon" aria-hidden="true"><use href="#i-flower"/></svg></div>
+      <div class="actions"><a class="btn btn-primary" href="sms:+19125720940"><svg class="icon" aria-hidden="true"><use href="#i-chat"/></svg> Text Autumn</a>
+        <a class="btn btn-ghost" href="tel:+19198440233"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg> Call the Salon</a></div>
+      
+      
+    </div>
+  </div>
+</section>
+
+<!-- ============ BIO ============ -->
+<section class="bio-body">
+  <div class="wrap">
+    <div class="bio-copy reveal">
+      <p>Our front desk and operations manager, Autumn, is a North Carolina native who made Raleigh home in spring 2023. She earned her B.A. in English from UNC Wilmington, specializing in professional writing. She brings over a decade of experience from the service and hospitality world, mostly in food and beverage, before making the leap into cosmetics. She has a passion for mixed media and digital art, photography, and has been modeling since 2021.</p>
+      <p>When she’s not working you’ll likely find her dancing at live shows, hunting down the Triangle’s best eats and entertainment, or soaking up time outdoors. A lifelong animal lover, Autumn is also a devoted cat mom to her girl, Artemis.</p>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ MORE OF THE CREW ============ -->
+<section class="crew" aria-label="More of the team">
+  <div class="wrap crew-grid reveal">
+    <a class="crew-card prev" href="bio-heather-anderson.html">
+      <img src="https://images.squarespace-cdn.com/content/v1/6455174a12f9733c95fe79c3/07c5fdaa-ed42-4434-9b87-1dc9e31acc05/image-asset.jpg?format=500w" alt="Heather Anderson" loading="lazy" onerror="this.style.visibility='hidden'">
+      <div><small>Previous</small><b>Heather Anderson</b></div>
+    </a>
+    <a class="btn btn-ghost crew-all" href="index.html#team">All of the team</a>
+    <a class="crew-card next" href="bio-orson.html">
+      <img src="https://images.squarespace-cdn.com/content/v1/6455174a12f9733c95fe79c3/0849999e-46c3-4a76-82bf-5b11f387e0c1/OrsonSquarespace.jpg?format=500w" alt="Orson" loading="lazy" onerror="this.style.visibility='hidden'">
+      <div><small>Next</small><b>Orson</b></div>
+    </a>
+  </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section class="band-sec">
+  <div class="wrap">
+    <div class="band reveal">
+      <h2>Ready for a <em>good hair day</em>?</h2>
+      <p>Questions about booking, policies, or anything else? Autumn is the one to ask.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="https://www.vagaro.com/crazycombs/book-now" target="_blank" rel="noopener">Book Now <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <a class="btn btn-ghost" href="tel:+19198440233"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg> (919) 844-0233</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <span class="brand-name">Crazy <em>Combs</em></span>
+        <p>A full-service hair &amp; nail salon in a little house between Historic Oakwood and Mordecai, just outside downtown Raleigh.</p>
+        <div class="socials">
+          <a class="soc" href="https://instagram.com/crazycombs" target="_blank" rel="noopener" aria-label="Instagram"><svg class="icon"><use href="#i-instagram"/></svg></a>
+          <a class="soc" href="https://facebook.com/crazycombs" target="_blank" rel="noopener" aria-label="Facebook"><svg class="icon filled"><use href="#i-facebook"/></svg></a>
+          <a class="soc" href="https://tiktok.com/@crazycombs" target="_blank" rel="noopener" aria-label="TikTok"><svg class="icon filled"><use href="#i-tiktok"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h4>Visit</h4>
+        <ul class="foot-info">
+          <li><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg><span>828 Wake Forest Rd.<br>Raleigh, NC 27604</span></li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg><span>Tue – Sat · 9:30am – 5:30pm</span></li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg><a href="tel:+19198440233">(919) 844-0233</a></li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg><a href="mailto:desk.crazycombs@gmail.com">desk.crazycombs@gmail.com</a></li>
+        </ul>
+      </div>
+      <div class="foot-book">
+        <h4>Ready when you are</h4>
+        <a class="btn btn-primary" href="https://www.vagaro.com/crazycombs/book-now" target="_blank" rel="noopener">Book Now <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <p>If you don't see your stylist online, give us a call or text and we'll get you taken care of.</p>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="year">2026</span> Crazy Combs Salon · Raleigh, NC</span>
+      <a href="index.html">Back to the homepage</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  // header shadow on scroll
+  var header = document.getElementById('site-header');
+  var onScroll = function(){ header.classList.toggle('scrolled', window.scrollY > 12); };
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+
+  // scroll-triggered fade-in
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var revealEls = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window && !reduceMotion){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    }, {threshold:0.12, rootMargin:'0px 0px -40px 0px'});
+    revealEls.forEach(function(el){ io.observe(el); });
+  } else {
+    revealEls.forEach(function(el){ el.classList.add('in'); });
+  }
+
+  // scissors cursor + animated snip on every click + falling clippings
+  if (window.matchMedia('(pointer:fine)').matches){
+    var snipColors = ['#C4677C','#A94F65','#7C9070','#D9B98A'];
+    var strandSVG = '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M3 3c6.5 1 2.5 5 6.5 7 3 1.5 4-2 3-4"/></svg>';
+    var petalSVG = '<svg viewBox="0 0 16 16"><path d="M8 1.5c3 2.6 3 7.4 0 13-3-5.6-3-10.4 0-13Z" fill="currentColor"/></svg>';
+    var scissorsSVG =
+      '<svg viewBox="0 0 28 28" aria-hidden="true">' +
+      '<g class="bA"><path d="M9 9 24 19" fill="none" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round"/><path d="M9 9 24 19" fill="none" stroke="#A94F65" stroke-width="2.2" stroke-linecap="round"/><circle cx="6" cy="7" r="3" fill="#FFFFFF" stroke="#A94F65" stroke-width="2"/></g>' +
+      '<g class="bB"><path d="M9 19 24 9" fill="none" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round"/><path d="M9 19 24 9" fill="none" stroke="#A94F65" stroke-width="2.2" stroke-linecap="round"/><circle cx="6" cy="21" r="3" fill="#FFFFFF" stroke="#A94F65" stroke-width="2"/></g>' +
+      '</svg>';
+    var activeSnip = null;
+    document.addEventListener('pointerdown', function(e){
+      if (reduceMotion) return;
+      if (activeSnip){
+        clearTimeout(activeSnip.t);
+        document.removeEventListener('pointermove', activeSnip.mv);
+        activeSnip.el.remove();
+      }
+      var sc = document.createElement('span');
+      sc.className = 'snip-cursor';
+      sc.style.left = e.clientX + 'px';
+      sc.style.top = e.clientY + 'px';
+      sc.innerHTML = scissorsSVG;
+      document.body.appendChild(sc);
+      document.body.classList.add('snip-hide');
+      var mv = function(ev){ sc.style.left = ev.clientX + 'px'; sc.style.top = ev.clientY + 'px'; };
+      document.addEventListener('pointermove', mv);
+      var t = setTimeout(function(){
+        document.removeEventListener('pointermove', mv);
+        sc.remove();
+        if (activeSnip && activeSnip.el === sc){
+          activeSnip = null;
+          document.body.classList.remove('snip-hide');
+        }
+      }, 370);
+      activeSnip = {el: sc, mv: mv, t: t};
+      var count = 4 + Math.floor(Math.random() * 3);
+      for (var i = 0; i < count; i++){
+        var bit = document.createElement('span');
+        bit.className = 'snip-bit';
+        bit.style.left = (e.clientX - 7 + (Math.random() * 14 - 7)) + 'px';
+        bit.style.top = (e.clientY - 4 + (Math.random() * 10 - 5)) + 'px';
+        bit.style.color = snipColors[Math.floor(Math.random() * snipColors.length)];
+        bit.style.setProperty('--dx', (Math.random() * 96 - 48) + 'px');
+        bit.style.setProperty('--rot', (Math.random() * 280 - 140) + 'deg');
+        bit.style.animationDelay = (Math.random() * 0.12) + 's';
+        bit.innerHTML = Math.random() < 0.6 ? strandSVG : petalSVG;
+        document.body.appendChild(bit);
+        bit.addEventListener('animationend', function(ev){ ev.target.closest('.snip-bit').remove(); });
+        setTimeout(function(b){ return function(){ if (b.parentNode) b.remove(); }; }(bit), 1400);
+      }
+    });
+  }
+
+  // current year
+  var y = document.getElementById('year');
+  if (y) y.textContent = new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
